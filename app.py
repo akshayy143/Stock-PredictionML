@@ -9,7 +9,10 @@ import matplotlib.pyplot as plt
 
 
 # model = load_model(r'C:\Users\Lenovo\Downloads\stock\Stock Predictions Model.keras')
-model = load_model(r'C:\Users\Lenovo\Downloads\Pythonstock2\Stock Predictions Model.keras')
+# model = load_model(r'C:\Users\Lenovo\Downloads\Pythonstock2\Stock Predictions Model.keras')
+# This looks for the file in your GitHub repo instead of your computer
+model = load_model('Stock Predictions Model.keras')
+
 
 st.header('Stock Price Prediction App')
 
