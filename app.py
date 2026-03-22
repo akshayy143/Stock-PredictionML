@@ -17,10 +17,15 @@ model = load_model('Stock Predictions Model.keras')
 st.header('Stock Price Prediction App')
 
 stock = st.text_input('Enter Stock Symbol', 'GOOG')
-start = '2012-01-01'
+start = '2012-01-04'
 end = '2022-12-31'
 
 data = yf.download(stock, start, end)
+
+
+if data.empty:
+    st.error(f"No data found for {stock}. Please check the symbol or date range.")
+    st.stop()
 
 st.subheader('Stock Data')
 st.write(data)
